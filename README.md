@@ -1,6 +1,6 @@
 # Open Issue Action
 
-![test workflow](https://github.com/github-actions-course/open-issue-action/actions/workflows/test.yml/badge.svg?event=push&branch=main)
+![test workflow](https://github.com/github-actions-course/open-issue-action/actions/workflows/ci.yml/badge.svg?event=push&branch=main)
 
 This action opens a new issue on GitHub with a title, body and a list of assignees.
 

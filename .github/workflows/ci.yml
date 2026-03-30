@@ -53,12 +53,13 @@ jobs:
         id: checkout
         uses: actions/checkout@v6
 
-      - name: Test Local Action
-        id: test-action
+      - name: Test local action
         uses: ./
+        id: issue
         with:
-          milliseconds: 2000
-
-      - name: Print Output
-        id: output
-        run: echo "${{ steps.test-action.outputs.time }}"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: Test Issue
+          body: Test issue body
+          assignees: |
+            amscu-dev
+      - run: echo ${{ steps.issue.outputs.issue }}

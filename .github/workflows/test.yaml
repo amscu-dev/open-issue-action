@@ -1,10 +1,10 @@
-name: "units-test"
+name: 'units-test'
 on:
   pull_request:
   push:
     branches:
       - main
-      - "releases/*"
+      - 'releases/*'
 
 jobs:
   # unit tests
@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       # GitHub Actions caută action.yml în path-ul specificat, deci ./ înseamnă: <root-of-current-repo>/action.yml
-      - uses: ./ 
+      - uses: ./
         id: issue
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
